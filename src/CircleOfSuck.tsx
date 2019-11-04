@@ -13,6 +13,7 @@ type Props = {
 
 export const CircleOfSuck: FC<Props> = ({ year, conference }) => {
   const games = useGetGames(year, conference)
+  console.log(year, games)
   const teams = useGetTeams(conference)
 
   if (!games || !teams) {
