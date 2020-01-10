@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/circle-of-suck/static/js/main.b4b6e397.chunk.js",
+    "main.js.map": "/circle-of-suck/static/js/main.b4b6e397.chunk.js.map",
+    "runtime-main.js": "/circle-of-suck/static/js/runtime-main.93745058.js",
+    "runtime-main.js.map": "/circle-of-suck/static/js/runtime-main.93745058.js.map",
+    "static/js/2.09142adb.chunk.js": "/circle-of-suck/static/js/2.09142adb.chunk.js",
+    "static/js/2.09142adb.chunk.js.map": "/circle-of-suck/static/js/2.09142adb.chunk.js.map",
+    "index.html": "/circle-of-suck/index.html",
+    "precache-manifest.3e6f8d12d5a4bfdb36d10142b5e20a2c.js": "/circle-of-suck/precache-manifest.3e6f8d12d5a4bfdb36d10142b5e20a2c.js",
+    "service-worker.js": "/circle-of-suck/service-worker.js",
+    "static/js/2.09142adb.chunk.js.LICENSE": "/circle-of-suck/static/js/2.09142adb.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.93745058.js",
+    "static/js/2.09142adb.chunk.js",
+    "static/js/main.b4b6e397.chunk.js"
+  ]
+}
