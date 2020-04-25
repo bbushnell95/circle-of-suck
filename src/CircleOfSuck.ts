@@ -12,6 +12,13 @@ type CircleOfSuckResult = {
   teams: Maybe<Team[]>
 }
 
+/**
+ * Creates the Circle of Suck State.
+ * @param {number} year Year to calculate the Circle of Suck.
+ * @param {Conference} conference College Football Conference to calculate the Circle of Suck for.
+ * 
+ * @returns {Array<Array<object>>} The result of finding the circle of suck.
+ */
 export const useCircleOfSuck = (year: number, conference: Conference): CircleOfSuckResult => {
   const games = useGetGames(year, conference)
   const teams = useGetTeams(conference)
@@ -44,6 +51,14 @@ type CircleOfSuckEdge = {
   isPlayed: boolean // has this game already been played?
 }
 
+/**
+ * Finds the Circle Of Suck given all of the teams and games for a conference. If a circle of suck cannot be found,
+ * undefined is returned.
+ * @param {Team[]} teams List of Teams. 
+ * @param {Game[]} games List of Games.
+ * 
+ * @returns {Promise<Maybe<CircleOfSuckEdge[]>>>} Object containing the edges of which teams beat which.
+ */
 const findCircleOfSuck = async (teams: Team[], games: Game[]): Promise<Maybe<CircleOfSuckEdge[]>> => {
   // maps winner team -> loser team
   const gameGraph = _.fromPairs(_.map(teams, ({ school }) => [school, [] as string[]]))

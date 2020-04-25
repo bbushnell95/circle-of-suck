@@ -9,6 +9,9 @@ import { useCircleOfSuck } from './CircleOfSuck'
 const NOW = new Date()
 const INITIAL_YEAR = NOW.getFullYear() + (NOW.getMonth() < 6 ? -1 : 0)
 
+/**
+ * Main App for the react app.
+ */
 export const App: FC = () => {
   // TODO: make inputtable by user
   const [year] = useState(INITIAL_YEAR)
@@ -21,6 +24,13 @@ export const App: FC = () => {
   )
 }
 
+/**
+ * Component container the circle of suck component.
+ * @param {number} year Year to determine the circle of suck for.
+ * @param {conference} Conference Conference to find the circle of suck for.
+ * 
+ * @returns React HTML
+ */
 const CircleOfSuck: FC<{ year: number; conference: Conference }> = ({ year, conference }) => {
   const { loading, circleOfSuck, teams } = useCircleOfSuck(year, conference)
 
